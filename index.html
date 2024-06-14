@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super Awesome Weather</title>
+</head>
+<body>
+    <div class="container">
+        <form id="Zipcode-Form" novalidate>
+            <label for="zipcode">Enter ZIP Code:</label>
+            <input type="text" id="zipcode" name="zipcode" minlength="5" maxlength="5" required>
+            <div class="error" id="zip-error"></div>
+            <button type="submit">Get Forecast</button>
+        </form>
+        <div id="forecast" class="forecast" style="display: none;">
+            <h2>3-Day Weather Forecast</h2>
+            <div class="forecast-grid">
+                <div class="day" id="day1" >
+                    <h3>Day 1</h3>
+                    <img id="icon1" class="icon" src="" alt="Condition Icon">
+                    <p>Temperature: <span id="temp1"></span>°C</p>
+                    <p>Condition: <span id="condition1"></span></p>
+                </div>
+                <div class="day" id="day2" >
+                    <h3>Day 2</h3>
+                    <img id="icon2" class="icon" src="" alt="Condition Icon">
+                    <p>Temperature: <span id="temp2"></span>°C</p>
+                    <p>Condition: <span id="condition2"></span></p>
+                </div>
+                <div class="day" id="day3" >
+                    <h3>Day 3</h3>
+                    <img id="icon3" class="icon" src="" alt="Condition Icon">
+                    <p>Temperature: <span id="temp3"></span>°C</p>
+                    <p>Condition: <span id="condition3"></span></p>
+                </div>
+            </div>
+        </div>
+        <div id="hourlyForecast" class="forecast" style="display:none;">
+            <button id="showThreeDayForecast">Back to 3-Day Forecast</button>
+            <h2 id="hourlyTitle"></h2>
+            
+            <div  id="hourlyGrid">
+                <!-- Hourly forecast will be dynamically inserted here -->
+            </div>
+            
+        </div>
+    </div>
+    
+<script defer src="runtime.bundle.js"></script><script defer src="index.bundle.js"></script></body>
+</html>
